@@ -1,7 +1,8 @@
-import { ValuesController } from "./Controllers/ValuesController.js";
+import { CatsController } from "./Controllers/CatsController.js";
+import { Cat } from "./models/Cat.js"
 
 class App {
-  valuesController = new ValuesController();
+  catsController = new CatsController()
 }
 
-window["app"] = new App();
+window['app'] = new App()
