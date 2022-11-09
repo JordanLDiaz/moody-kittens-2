@@ -9,6 +9,7 @@ function _drawCats() {
   // @ts-ignore
   document.getElementById('cats').innerHTML = template
 }
+
 export class CatsController {
   constructor() {
     _drawCats()
@@ -18,5 +19,11 @@ export class CatsController {
     console.log('clicked', catName)
     catsService.pet(catName)
     _drawCats()
+  }
+
+  createCat() {
+    window.event.preventDefault()
+    const form = window.event.target
+    catsService.createCat(form.catname.value)
   }
 }

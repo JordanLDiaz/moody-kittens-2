@@ -28,6 +28,14 @@
 
   <main>
     <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <form onsubmit="app.catsController.createCat()">
+            <input type="text" name="catname" id="catname" required>
+            <button type="submit" class="btn btn-success">Create Cat</button>
+          </form>
+        </div>
+      </div>
       <div class="row" id="cats">
         <!-- STUB cat -->
         <!-- <div class="col-12 col-md-3 p-3">
